@@ -1,0 +1,23 @@
+.shareButton {
+    margin: 0 5px 0 0;
+    width: 20px;
+    height: 20px;
+}
+
+.saveButton {
+    width: 20px;
+    height: 20px;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+}
+
+@media all and (min-width: 1024px) {
+
+    .actions {
+        display: none;
+    }
+}
+

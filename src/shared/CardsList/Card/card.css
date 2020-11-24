@@ -1,0 +1,47 @@
+.card {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: var(--white);
+    border-radius: 7px;
+}
+
+.controls {
+    padding: 10px 20px;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media all and (min-width: 1024px) {
+    .card {
+        padding: 20px 40px;
+        position: relative;
+        display: flex;
+        flex-flow: row wrap;
+        background-color: var(--white);
+        border-radius: 7px;
+    }
+
+    .controls {
+        padding: 0;
+        flex: 0 0;
+        order: 4;
+    }
+}
+
+@media all and (min-width: 1540px) {
+    .card {
+        padding: 0 60px;
+    }
+
+    .controls {
+        position: relative;
+    }
+
+    .card:hover h2 a, .card:focus-within h2 a {
+        color: var(--orange);
+    }
+}
