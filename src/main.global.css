@@ -45,3 +45,99 @@ button {
     border: none;
     cursor: pointer;
 }
+
+/*пришлось выносить сюда*/
+.menu__item {
+    padding: 10px 20px;
+    font-weight: normal;
+    color: var(--gray99);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.menu__item:not(:last-child)::before {
+    content: '';
+    margin-right: 5px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.menu__item:hover {
+    color: var(--orange);
+}
+
+.menu__item:hover::before {
+    filter: invert(47%) sepia(40%) saturate(815%) hue-rotate(335deg) brightness(92%) contrast(97%);
+}
+
+.menu__item:not(:last-child) {
+    border-bottom: 1px solid #ECECEC;
+}
+
+.menu__comments::before {
+    background-image: url("/src/shared/CardsList/Card/Menu/img/comments.svg");
+}
+
+.menu__share::before {
+    background-image: url("/src/shared/CardsList/Card/Menu/img/share.svg");
+}
+
+.menu__hidden::before {
+    background-image: url("/src/shared/CardsList/Card/Menu/img/hidden.svg");
+}
+
+.menu__save::before {
+    background-image: url("/src/shared/CardsList/Card/Menu/img/save.svg");
+}
+
+.menu__complaint::before {
+    background-image: url("/src/shared/CardsList/Card/Menu/img/complaint.svg");
+}
+
+.menu__comments,
+.menu__share,
+.menu__save {
+    display: none;
+}
+
+.menu__close {
+    display: block;
+    text-align: center;
+    color: var(--gray66);
+    background: var(--grayD9);
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+}
+
+.animationList-enter {
+    opacity: 0;
+}
+.animationList-enter-active {
+    opacity: 1;
+    transition: opacity 200ms ease-in-out;
+}
+.animationList-exit {
+    opacity: 1;
+}
+.animationList-exit-active {
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+}
+
+@media all and (min-width: 1024px) {
+    .menu__comments,
+    .menu__share,
+    .menu__save {
+        display: flex;
+    }
+}
+
+@media all and (min-width: 1540px) {
+
+
+}
